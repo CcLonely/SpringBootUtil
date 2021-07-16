@@ -1,0 +1,27 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /test
+
+spring:
+  jackson:
+    date-format:   yyyy-MM-dd HH:mm:ss
+    time-zone:   GMT+8
+  aop:
+    proxy-target-class: true
+  redis:
+    database: 8
+    host: 127.0.0.1
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8     #
+        max-wait: -1ms  #
+        min-idle: 0     #
+      shutdown-timeout: 100ms
+    #password: Redisadmin@2019
+    port: 6379
+
+
+path:
+  log: /www/jenkins/test
